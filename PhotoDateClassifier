@@ -32,7 +32,7 @@ def getOriginalDate(filename):
     elif(filename[2:3] == "V"):
         return "20"+filename[3:5]+"年"+filename[6:8]+"月"
 
-    # 如果没有拍摄日期信息则使用当前时间
+    # 如果没有拍摄日期信息
     state = os.stat(filename)
     return time.strftime("%Y年%m月", time.localtime(state[-2]))
 
